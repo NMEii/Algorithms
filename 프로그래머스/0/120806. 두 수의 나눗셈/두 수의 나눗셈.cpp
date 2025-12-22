@@ -1,0 +1,15 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(int num1, int num2) {
+    int answer = 0;
+    if((num1 >= 0 && num1 <= 100) && (num2 >= 0 && num2 <= 100))
+    {
+        double temp = 0;
+        temp = (double)num1 / (double)num2;
+        answer = temp * 1000;
+    }
+    return answer;
+}
