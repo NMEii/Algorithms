@@ -1,0 +1,14 @@
+#include <string>
+#include <algorithm>
+#include <vector>
+
+using namespace std;
+
+int solution(vector<int> numbers) {
+    int answer = 0;
+    for (int i = 0; i < numbers.size(); i++)
+    {       
+        answer += numbers[i];
+    }
+    return 45 - answer;
+}
