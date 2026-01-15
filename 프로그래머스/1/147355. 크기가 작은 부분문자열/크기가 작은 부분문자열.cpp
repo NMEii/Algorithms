@@ -4,24 +4,14 @@
 using namespace std;
 
 int solution(string t, string p) {
-    long long cutNum = 0;
-    vector<long long> str;
-
-    for (int i = 0; i < t.length() - (p.length() -1); i++)
-    {
-        cutNum = stoll(t.substr(i, p.length()));
-        str.push_back(cutNum);
-    }
-
     int answer = 0;
     long long compareNum = stoll(p);
-    for (const long long value : str)
+    for (int i = 0; i <= t.length() - p.length(); i++)
     {
-        if (value <= compareNum)
+        if (stoll(t.substr(i, p.length())) <= compareNum)
         {
             answer++;
         }
     }
-
     return answer;
 }
